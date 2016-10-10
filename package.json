@@ -1,0 +1,23 @@
+{
+  "name": "RodEllisonSite",
+  "version": "0.1.1",
+  "license": "MIT",
+
+  "description": "node.js rodellisonsite app",
+  "author": "Rod Ellison",
+
+  "dependencies": {
+    "express": "^4.x"
+  },
+
+  "scripts": {
+    "start": "node index.js"
+  },
+  "main": "index.js",
+
+  "engines": {
+    "node": "*" ,
+    "npm": "*"
+   }
+
+ }

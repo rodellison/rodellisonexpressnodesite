@@ -1,0 +1,76 @@
+/*
+* The education section
+*/
+.edu{
+	border-bottom: 1px solid black;
+}
+
+.location{
+	font-size: 0.8em;
+	display: inline;
+}
+
+.time{
+	font-size: 0.8em;
+	float: right;
+	color: #E3794F;
+}
+
+/*
+* Each little 'experience block' of a job, place, time, and description
+*/
+.exp{
+}
+
+.resumeButton{
+	display: inline ;
+	background-color: #19c589;
+	border-radius: 6px;
+	text-align: center;
+	width: 140px;
+	height: 30px;
+	font-variant: small-caps;
+	padding:3px;
+}
+.resumeButton a{
+	display:inline;
+	color: white;
+	text-decoration: none;
+	background-color:#19c589;
+	/*line-height: 30px;*/
+}
+.resumeButton:hover {
+	background-color: white;
+	color: #19c589;
+	display: inline;
+}
+.resumeButton:hover a{
+	display:inline;
+	background-color: white;
+	color: #19c589;
+	border-radius: 6px;
+}
+
+
+/*
+* Currently used only on the resume page, so the settings are used to match the 'groupedText' each chunk uses
+*/
+h2{
+	width: 90%; /*Used to match the groupedText */
+	margin: auto;  /*Used to match the groupedText */
+	font-size: 1.7em; /*default h2 is 1.5em*/
+	padding-bottom: 10px;
+}
+
+/*
+* Resets the list formatting that got stripped for the nav menu
+*/
+ul { 
+   list-style-type: none; /*this is normally disc*/
+   list-style-position: inside; 
+}
+ul ul, ol ul { 
+   list-style-type: none;  /*this is normally disc*/
+   list-style-position: inside; 
+   margin-left: 25px;  /*this is normally 15px*/
+}

@@ -1,0 +1,28 @@
+/*
+* More centered on the page, to draw attention to it. Use sparsely.
+*/
+.boxOfText{
+	margin: auto;
+	width: 80%;
+	position:relative;
+	padding: 30px;
+}
+/*
+* The groups of text you see throughout the website.
+*/
+.groupedText{
+	padding-bottom:20px;
+	width: 90%;
+	margin: auto;
+}
+/*
+* Use bold as the header-type of each of these boxes, not for generic bold use.
+*/
+.groupedText b{
+	color: #E3794F;
+	font-size: 1.2em;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	position: relative;
+
+}

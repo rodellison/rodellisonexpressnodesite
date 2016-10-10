@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="PortfolioApp" >
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>
+		Rod Ellison Site
+	</title>
+
+<link href="styles/mainStyle.css" rel="stylesheet" type='text/css'>
+<link href="styles/about.css" rel="stylesheet" type='text/css'>
+<link href="styles/resume.css" rel="stylesheet" type='text/css'>
+<link href="styles/project.css" rel="stylesheet" type='text/css'>
+
+</head>
+
+<body id="page-top" onscroll="navTransparencyChange()">
+
+<div id="content">
+
+    <nav id="newnavbar">
+        <p>Rod Ellison</p>
+        <ul ng-controller="navController as nav" id="menu">
+            <!--These links are loaded in "backwards" since they float right to left,
+            so the ones on top in the code are furthest to the right-->
+            <li>
+                <a href="https://s3.amazonaws.com/content.rodellison.net/site/files/Rodney+R+Ellison.pdf" download>Resume</a>
+            </li>
+            <li ng-repeat="link in nav.links" class="clickForScroll">
+                <a class="nav-link" href="{{link.URL}}" >{{link.linkName}} </a>
+            </li>
+
+        </ul>
+        <label for="show-menu" class="show-menu" id="show-menu"><img src="https://s3.amazonaws.com/content.rodellison.net/site/images/menu.svg" alt="Menu"></label>
+    </nav>
+
+    <header>
+        <img class="banner" src="https://s3.amazonaws.com/content.rodellison.net/site/images/OceanBackground.jpg" />
+        <img class="face" src="https://s3.amazonaws.com/content.rodellison.net/site/images/faceSquare.jpg" alt="Rod Ellison" />
+        <div class="name" id="scrollTo"></div>
+
+    </header>
+
+    <div class="slide-container">
+        <div ng-view  id="slide" class="slide"></div>
+    </div> <!--slide-container div-->
+    <div ng-controller="contentController as content"></div>
+    <ng-include src="'templates/footer.html'"></ng-include>
+
+</div> <!--content div-->
+
+</body>
+
+<!--scripts go here-->
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/angular-animate.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/script.js"></script>
+
+
+</html>
+
