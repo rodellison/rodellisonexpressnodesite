@@ -1,15 +1,11 @@
-"use strict"
-var express = require('express');
-var app = express();
-var path = require('path');
+'use strict'
+const express = require('express')
+const app = express()
 
-
-app.use(express.static(path.join(__dirname,'/site')))
+app.use(express.static(`${__dirname}/site`))
 
 app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname,'/site/index.html'))
-	console.log('Serving up /site/index.html page');
-    
+	res.sendFile(`${__dirname}/site/index.html`)
 }) ;
 
 //Commenting out the below, which was for a normal ip/port run express node app.. don't need this when running
