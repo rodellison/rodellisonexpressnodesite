@@ -19,11 +19,11 @@ e.g.
 
 **Prepping the code and getting it to AWS**
 
-In the project directory, run the specific commands to install the dependencies, have Claudia.js generate a proxy, and then have Claudia.js deploy the code to AWS Lambda and setup the API Gateway
-1.  ```npm install```                 to grab the dependencies
-2.  ```npm run generate-proxy ```     to create a simple proxy API for the express app. Note this step will automatically perform an npm install aws-serverless-express and add it to dependencies in the package.json
+In the project directory, run the specific commands to install the dependencies, have Claudia.js generate a proxy, and then have Claudia.js deploy the code to AWS Lambda and setup the API Gateway.<br>
+1.  ```npm install```                 to grab the dependencies<br>
+2.  ```npm run generate-proxy ```     to create a simple proxy API for the express app. Note this step will automatically perform an npm install aws-serverless-express and add it to dependencies in the package.json<br>
 3.  ```npm run deploy    ```          to send everything up to AWS Lambda. Note: any existing claudia.json in the project folder should be deleted before doing the first deploy. This file will be
-auto-generated for each new setup. 
+auto-generated for each new setup. <br>
 4.  ```npm run update   ```           can be used to package up later project revisions. After the deploy, the claudia.json file will be created, and the update will then use 
 that so as to upload any revised code to the existing lambda function that was created as part of the first deploy.
 
