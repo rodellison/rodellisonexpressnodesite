@@ -1,7 +1,7 @@
 /*
-* "View on Github" buttons on the Project page
+* "View on BitBucket" buttons on the Project page
 */
-.gitHubButton{
+.bitbucketButton {
 	position: relative;
     right: 5px;
 	background-color: #19c589;
@@ -12,18 +12,18 @@
 	height: 30px;
 	font-variant: small-caps;
 }
-.gitHubButton a{
+.bitbucketButton a{
 	display:block;
 	color: white;
 	text-decoration: none;
 	line-height: 30px;
 }
-.gitHubButton:hover {
+.bitbucketButton:hover {
 	background-color: white;
 	color: #19c589;
 	display: block;
 }
-.gitHubButton:hover a{
+.bitbucketButton:hover a{
 	display:block;
 	background-color: white;
 	color: #19c589;
@@ -33,7 +33,7 @@
 * A fix for the buttons, by floating it inside this element, it won't sit on top of the text.
 */
 .buttonHolder{
-	height: 30px; /*must be same height as the gitHubButton*/
+	height: 30px; /*must be same height as the bitbucketButton*/
 	width:100%;
 	position: inline;
 }
