@@ -16,6 +16,6 @@ app.get('/', function(req, res) {
 //app.listen(port, ip);
 //console.log('Listening on '+ ip + ':' + port);
 
-module.exports = app; // add this line
+//module.exports = app; // add this line
 
 
