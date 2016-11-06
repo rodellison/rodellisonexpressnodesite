@@ -3,7 +3,8 @@
 <div class="groupedText">
 <p>
 <b>This site:</b>
-This site is a single-page, responsive app using mostly vanilla JavaScript, AngularJS for routing, linking, and animations; NodeJS, HTML5, and CSS3. The project makes uses of Claudia.js and aws-serverless-express so as to allow it to run in AWS Lambda front ended by AWS API Gateway.
+This site is a single-page, responsive app using mostly vanilla JavaScript, AngularJS for routing, linking, and animations; NodeJS, HTML5, and CSS3. The project is currently setup as a normal express node site
+	and runs in AWS Beanstalk, but can easily be modified to make use of Claudia.js and aws-serverless-express so as to allow it to run in AWS Lambda front ended by AWS API Gateway.
 <div class="buttonHolder"><div class="bitbucketButton">
 <a href="https://bitbucket.org/rodellison/rodellisonexpressnodesite" title="Online site">View on Bitbucket</a>
 </div></div>
@@ -13,7 +14,7 @@ This site is a single-page, responsive app using mostly vanilla JavaScript, Angu
 <div class="groupedText">
 <p>
 <b>"The Music Man" - Amazon Echo/Alexa skill:</b>
-	AWSMusicMan - is a Java application, which includes a JavaFX test app - allowing Amazon Echo customers the ability to query musician and venue calendars - for which the results are 'spoken' through the customer's ECHO device (via Alexa).
+	AWSMusicMan - is a Java application that runs in AWS Lambda, allowing Amazon Echo customers the ability to query musician and venue calendars - for which the results are 'spoken' through the customer's ECHO device (via Alexa).
 <div class="buttonHolder"><div class="bitbucketButton">
 <a href="https://bitbucket.org/rodellison/awsmusicman" title="The Music Man">View on Bitbucket</a>
 </div></div>
@@ -22,23 +23,24 @@ This site is a single-page, responsive app using mostly vanilla JavaScript, Angu
 
 <div class="groupedText">
 	<p>
-		<b>MusicManParmFixer</b>
-		MusicManParmFixer is a simple express/bootstrap app to allow quick updates of Artists or Venue values into an AWS DynamoDB table. The values stored by this app are leveraged by the MusicMan Alexa Skill.
-		Effectively, the app provides a quick and dirty means to provide some 'corrected' values so that if someone uses the Alexa Skill Music Man and says.. where is Rianna playing, the skill can do a quick lookup with the value provided by the customer,
-		and do a swap if a corrected value is available. e.g it can quickly swap the bad value of Rianna out, and instead use the correct value "Rihanna".
-	    Lastly, for values successfully updated into the AWS DynamoDB, a seperate AWS SNS topic is provided a message, which is then sent via email to a subscriber.
-		<div class="buttonHolder"><div class="bitbucketButton">
-		<a href="https://bitbucket.org/rodellison/musicmanparmfixer" title="MusicManParmFixer">View on Bitbucket</a>
+		<b>"The Music Man" GUI Test app:</b>
+		AWSMusicManTester - is a JavaFX GUI application, used to test out queries to the Songkick API before placing logic in the Alexa Skill Music Man app.
+	<div class="buttonHolder"><div class="bitbucketButton">
+		<a href="https://bitbucket.org/rodellison/awsmusicmantester" title="The Music Man">View on Bitbucket</a>
 	</div></div>
 	</p>
 </div>
 
+
 <div class="groupedText">
 	<p>
-		<b>Unity3D Projects:</b>
-		Several to be uploaded. VR Project examples for eLearning.
-	<div class="buttonHolder"><div class="bitbucketButton">
-		<a href="https://bitbucket.org/rodellison/" title="Unity3D app">View on Bitbucket</a>
+		<b>MusicManParmFixer</b>
+		MusicManParmFixer is a simple express/bootstrap app to allow quick updates of Artists or Venue values into an AWS DynamoDB table. The values stored by this app are leveraged by the MusicMan Alexa Skill.
+		Effectively, the app provides a quick and dirty means to provide some 'corrected' values so that if someone uses the Alexa Skill Music Man and says.. where is Rianna playing, the skill can do a quick lookup with the value provided by the customer,
+		and do a swap if a corrected value is available. e.g it can quickly swap the bad value of Rianna out, and instead use the correct value "Rihanna".
+	    Lastly, for values successfully updated into the AWS DynamoDB, a seperate AWS SNS topic is provided a message, which is then sent via email to a subscriber. This project make uses of Claudia.js and aws-serverless-express so as to allow it to run in AWS Lambda front ended by AWS API Gateway.
+		<div class="buttonHolder"><div class="bitbucketButton">
+		<a href="https://bitbucket.org/rodellison/musicmanparmfixer" title="MusicManParmFixer">View on Bitbucket</a>
 	</div></div>
 	</p>
 </div>
@@ -50,6 +52,16 @@ This site is a single-page, responsive app using mostly vanilla JavaScript, Angu
 		It was created to get familiar with S3 SDKs and features.
 	<div class="buttonHolder"><div class="bitbucketButton">
 		<a href="https://bitbucket.org/rodellison/awss3gui" title="AWS S3 Gui">View on Bitbucket</a>
+	</div></div>
+	</p>
+</div>
+
+<div class="groupedText">
+	<p>
+		<b>Unity3D Projects:</b>
+		Several to be uploaded. VR Project examples for eLearning.
+	<div class="buttonHolder"><div class="bitbucketButton">
+		<a href="https://bitbucket.org/rodellison/" title="Unity3D app">View on Bitbucket</a>
 	</div></div>
 	</p>
 </div>

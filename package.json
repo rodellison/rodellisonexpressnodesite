@@ -5,11 +5,12 @@
   "description": "node.js rodellisonsite app",
   "author": "Rod Ellison",
   "scripts": {
+    "start": "node app.js",
     "deploy": "claudia create --profile ClaudiaJS --handler lambda.handler --deploy-proxy-api --region us-east-1",
     "update": "claudia update --profile ClaudiaJS",
     "generate-proxy": "claudia generate-serverless-express-proxy --express-module app"
   },
-  "main": "lambda.js",
+  "main": "app.js",
   "dependencies": {
     "aws-serverless-express": "^1.1.1",
     "express": "^4.14.0"

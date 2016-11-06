@@ -1,10 +1,10 @@
 **Rod Ellison Personal Site**
 
-This project is a simple Node.js Express site with a few angular tweaks for responsive scrolling/sliding information. Its specifically modified to run in an AWS Lambda + AWS API Gateway environment, but could easily be reverted to run in a more typical app.listen(ip, port) mode.
-It uses the techniques as documented [at this link](https://aws.amazon.com/blogs/aws/running-express-applications-on-aws-lambda-and-amazon-api-gateway/?sc_channel=sm&sc_campaign=launch_Mobile_da831205&sc_publisher=fb_ln&sc_content=AWS_Severless_Express%3D&sc_country=global&sc_geo=global&sc_outcome=launches&adbsc=social_launches_20161007_66697356&adbid=UPDATE-c2382910-6190300418363445248&adbpl=li&adbpr=2382910)
+This project is a simple Node.js Express site with a few angular tweaks for responsive scrolling/sliding information.  Currently, the code is setup to run as a normal express/node application in AWS Beanstalk, but
+has most of the needed entries so as to be able to allow it to run in an AWS Lambda + AWS API Gateway environment using Claudia.js, and techniques as documented [at this link](https://aws.amazon.com/blogs/aws/running-express-applications-on-aws-lambda-and-amazon-api-gateway/?sc_channel=sm&sc_campaign=launch_Mobile_da831205&sc_publisher=fb_ln&sc_content=AWS_Severless_Express%3D&sc_country=global&sc_geo=global&sc_outcome=launches&adbsc=social_launches_20161007_66697356&adbid=UPDATE-c2382910-6190300418363445248&adbpl=li&adbpr=2382910)
 
 
-**Requirements**:
+**Requirements if running in AWS Lambda+ API Gateway mode**:
 
 [Requires Claudia.js](https://claudiajs.com/) - follow installation instructions at the link.
 Claudia.js will need specific AWS permissions to operate correctly. Easiest way is to use AWS IAM and configure a specific user with the [permissions documented here](https://claudiajs.com/tutorials/installing.html)
@@ -17,6 +17,8 @@ e.g.
 ```
 
 **Prepping the code and getting it to AWS**
+
+Remove the package.json Scripts (Start) entry, as well as replace app.js with lambda.js for the 'main' value.
 
 In the project directory, run the specific commands to install the dependencies, have Claudia.js generate a proxy, and then have Claudia.js deploy the code to AWS Lambda and setup the API Gateway.
 
